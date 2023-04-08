@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useContextGlobal } from "../components/utils/global.context"
+import doctor from '../assets/doctor.jpg'
 
+<img src={doctor} alt='imagen del medico' width={200} />
 
 const Card = ({ dentist }) => {
   const { themeState, favDispatch, favState } = useContextGlobal()
@@ -18,7 +20,7 @@ const Card = ({ dentist }) => {
     <div className={themeState.theme ? 'card' : 'card'}>
       <div>
         <Link to={`/dentist/${dentist.id}`}>
-          <img src="/src/assets/doctor.jpg" alt="imagen del medico" width={200} />
+          <img src={doctor} alt='imagen del medico' width={200} />
           <h3>{dentist.name}</h3>
           <h3>{dentist.username}</h3>
           <h4>{dentist.id}</h4>
